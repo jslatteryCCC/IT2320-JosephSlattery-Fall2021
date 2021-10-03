@@ -6,7 +6,7 @@ class Book {
         this.author = author;
         this.price = price;
         this.origin = origin;
-        this.discountedPrice = 0;
+        this.salesPrice = 0;
 }
 }
 const book1 = new Book ("Ancillary Justice", "Ann Leckie", 50.00, "US");
@@ -35,12 +35,12 @@ const bookArray = new Array(book1, book2, book3, book4, book5, book6, book7, boo
 /********************************************/
 function getDiscountedPrices(){ 
 
-    bookArray.forEach(element => {element.discountedPrice = element.price - (element.price * getDiscountPercent(element))});
+    bookArray.forEach(element => {element.salesPrice = element.price - (element.price * getDiscountPercent(element))});
     bookArray.forEach(element => {console.log(
         element.title + " by " + 
         element.author +"\n" + " Original Price: $" + 
         element.price.toFixed(2) + " - " + "Sale Price: $" +
-        element.discountedPrice.toFixed(2), )})
+        element.salesPrice.toFixed(2), )})
 }
 
 function getDiscountPercent(book)
