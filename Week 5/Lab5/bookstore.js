@@ -47,10 +47,9 @@ function getDiscountPercent(book)
 {
     return book.origin == "UK" ? .05 
           :book.origin == "US" ? .1
-          :book.origin == "CAN" ? .12
+          :book.origin ==  "CAN" ? .12
           :.15;
 }
-getDiscountedPrices()
 /*
 Goal: In this lab you will create a "Books" collection with information about the name of the book, the author, price and country of origin. Then when the "Get Discounted Prices" button is clicked, your code should look through the collections, and apply a discount to the books based on their country of origin. 
 Startup code is here:  https://github.com/ManjulaChandirasekaran/Spring2020IT2320/tree/master/Lab5  
